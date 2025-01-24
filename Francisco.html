@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 1 - Demo Page</title>
+  <link rel="stylesheet" href="Francisco.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fundamentals Demo</h1>
+    <div id="demo">
+      <h2>Variables and Input/Output</h2>
+      <p>Enter your name:</p>
+      <input type="text" id="nameInput" placeholder="Your name">
+      <button onclick="greetUser()">Submit</button>
+      <p id="greeting"></p>
+
+      <h2>Conditionals</h2>
+      <p>Enter a number to check if it's odd or even:</p>
+      <input type="number" id="numberInput" placeholder="Enter a number">
+      <button onclick="checkOddEven()">Check</button>
+      <p id="numberResult"></p>
+
+      <h2>Looping</h2>
+      <p>Enter a number to see a list of numbers from 1 to your input:</p>
+      <input type="number" id="loopInput" placeholder="Enter a number">
+      <button onclick="generateList()">Generate List</button>
+      <ul id="numberList"></ul>
+    </div>
+    <a href="index.html" class="btn">Back to Landing Page</a>
+  </div>
+  <script src="Francisco.js"></script>
+</body>
+</html>
