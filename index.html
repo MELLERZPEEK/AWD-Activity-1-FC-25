@@ -3,82 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activity 1 - Demo Page</title>
+  <title>Activity 1 - Landing & Demo Page</title>
   <link rel="stylesheet" href="Francisco.css">
-  <style>
-
-    #demo {
-      display: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="container" id="landingPage">
-    <h1>Activity 1: Demonstration of Programming Fundamentals</h1>
-    <p>Welcome to the Activity! This web application demonstrates JavaScript fundamentals such as variables, input/output, conditionals, and looping.</p>
-    <button id="startDemoButton" onclick="showDemo()">Go to Demo Page</button>
-  </div>
-
-  <div class="container" id="demo" style="display: none;">
-    <h1>Fundamentals Demo</h1>
-    <div>
-      <h2>Variables and Input/Output</h2>
-      <p>Enter your name:</p>
-      <input type="text" id="nameInput" placeholder="Your name">
-      <button onclick="greetUser()">Submit</button>
-      <p id="greeting"></p>
-
-      <h2>Conditionals</h2>
-      <p>Enter a number to check if it's odd or even:</p>
-      <input type="number" id="numberInput" placeholder="Enter a number">
-      <button onclick="checkOddEven()">Check</button>
-      <p id="numberResult"></p>
-
-      <h2>Looping</h2>
-      <p>Enter a number to see a list of numbers from 1 to your input:</p>
-      <input type="number" id="loopInput" placeholder="Enter a number">
-      <button onclick="generateList()">Generate List</button>
-      <ul id="numberList"></ul>
-    </div>
-    <button onclick="goBack()">Back to Landing Page</button>
-  </div>
-
-  <script src="Francisco.js"></script>
   <script>
-
     function showDemo() {
-      document.getElementById('landingPage').style.display = 'none';
+      document.getElementById('landing').style.display = 'none';
       document.getElementById('demo').style.display = 'block';
     }
-
-
-    function goBack() {
+    function showLanding() {
       document.getElementById('demo').style.display = 'none';
-      document.getElementById('landingPage').style.display = 'block';
-    }
-
-
-    function greetUser() {
-      const name = document.getElementById('nameInput').value;
-      document.getElementById('greeting').textContent = `Hello, ${name}!`;
-    }
-
-    function checkOddEven() {
-      const number = parseInt(document.getElementById('numberInput').value);
-      const result = (number % 2 === 0) ? "Even" : "Odd";
-      document.getElementById('numberResult').textContent = `The number is ${result}.`;
-    }
-
-    function generateList() {
-      const number = parseInt(document.getElementById('loopInput').value);
-      const list = document.getElementById('numberList');
-      list.innerHTML = '';
-      for (let i = 1; i <= number; i++) {
-        const li = document.createElement('li');
-        li.textContent = i;
-        list.appendChild(li);
-      }
+      document.getElementById('landing').style.display = 'block';
     }
   </script>
+</head>
+<body>
+  <div class="container" id="landing">
+    <h1>Activity 1: Demonstration of Programming Fundamentals</h1>
+    <p>Welcome to the Activity! This web application demonstrates JavaScript fundamentals such as variables, input/output, conditionals, and looping.</p>
+    <button onclick="showDemo()" class="btn">Go to Demo Page</button>
+  </div>
+  
+  <div class="container" id="demo" style="display: none;">
+    <h1>Fundamentals Demo</h1>
+    <h2>Variables and Input/Output</h2>
+    <p>Enter your name:</p>
+    <input type="text" id="nameInput" placeholder="Your name">
+    <button onclick="greetUser()">Submit</button>
+    <p id="greeting"></p>
+
+    <h2>Conditionals</h2>
+    <p>Enter a number to check if it's odd or even:</p>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkOddEven()">Check</button>
+    <p id="numberResult"></p>
+
+    <h2>Looping</h2>
+    <p>Enter a number to see a list of numbers from 1 to your input:</p>
+    <input type="number" id="loopInput" placeholder="Enter a number">
+    <button onclick="generateList()">Generate List</button>
+    <ul id="numberList"></ul>
+    
+    <button onclick="showLanding()" class="btn">Back to Landing Page</button>
+  </div>
+  
+  <script src="Francisco.js"></script>
 </body>
 </html>
