@@ -1,11 +1,10 @@
-// GREET THE USER
 function greetUser() {
     const name = document.getElementById('nameInput').value;
     const greeting = name ? `Hello, ${name}! Welcome to the demo.` : "Please enter your name.";
     document.getElementById('greeting').textContent = greeting;
   }
   
-  // ODD OR EVEN
+
   function checkOddEven() {
     const number = document.getElementById('numberInput').value;
     let result = '';
@@ -17,7 +16,7 @@ function greetUser() {
     document.getElementById('numberResult').textContent = result;
   }
   
-  // LOOPING
+  
   function generateList() {
     const number = parseInt(document.getElementById('loopInput').value);
     const listContainer = document.getElementById('numberList');
